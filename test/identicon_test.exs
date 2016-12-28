@@ -14,4 +14,13 @@ defmodule IdenticonTest do
 
     assert expected == current
   end
+
+  test "mirrow_row should work correctly" do
+    input = [145, 46, 200]
+
+    expected = [145, 46, 200, 46, 145]
+    current = Identicon.mirrow_row(input)
+
+    assert expected == current
+  end
 end
